@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe game</title>
+  <!--link rel='stylesheet prefetch' href='https://getbootstrap.com/2.3.2/assets/css/bootstrap.css'-->
+  <!--link rel="stylesheet" href="css/style.css"-->
+  <link rel="stylesheet/less" type="text/css" href="./css/styles.less" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
+  <script src='https://code.jquery.com/jquery-1.7.2.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js'></script>
+  <script src="./js/main.js"></script>
+</head>
+
+<body>
+  <div id="tic-tac-toe">
+       <div id="title">
+          <h1>Tic Tac Toe <span><select id="gameScale" value="3">
+              <option value="3">3X</option>
+              <option value="4">4X</option>
+              <option value="5">5X</option>
+              <option value="6">6X</option>
+              <option value="7">7X</option>
+              <option value="8">8X</option>
+              <option value="9">9X</option>
+              <option value="10">10X</option>
+              <option value="11">11X</option>
+              <option value="12">12X</option>
+          </select></span></h1>
+          <i id="themeChanger" class="fas fa-cloud-moon dark--theme" title="Dark Theme"></i>
+
+       </div>
+       <div id="score">
+          <div id="o_win" class="score-pad">
+            <span class="score-symbol">O</span>
+            <span id="oScore" class="score-span">-</span>
+          </div>
+          <div id="x_win" class="score-pad active">
+              <span class="score-symbol">X</span >
+              <span id="xScore" class="score-span">-</span>
+          </div>
+
+       </div>
+
+       <div id="status">
+         <p id="statusText"> Now your turn! <b>X Player</b></p>
+       </div>
+
+      <div id="gamepad">
+          <div id="overlayPad">
+            <h1 id="overlayText"></h1>
+          </div>
+          <ul id="game">
+
+            </ul>
+      </div>
+
+      <div id="footer"><button id="reset" class="btn btn-restart">Restart</button></div>
+  </div>
+</body>
+
+</html>
